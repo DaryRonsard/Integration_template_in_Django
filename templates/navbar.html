@@ -1,0 +1,31 @@
+{% load static %}
+<nav class="site bg-light p-3">
+    <div class="text-center mb-4">
+        <img src="{% static 'images/etat.jpg' %}" alt="LogoMonEtab" class="img-fluid" style="width: 50px;">
+        <h4>Mon Etab</h4>
+    </div>
+    <hr>
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'dashboard:index' %}"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'student:index' %}"><i class="fas fa-chalkboard-teacher"></i> Élèves</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'teacher:index' %}"><i class="fas fa-users"></i> Professeurs</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'user:index' %}"><i class="fas fa-user-graduate"></i>Utilisateurs</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'report:index' %}"><i class="fas fa-users"></i>Rapport </a>
+        </li>
+    </ul>
+    <div class="mt-auto">
+        <hr>
+        <a href="{% url '' %}" class="btn btn-danger btn-block"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+    </div>
+</nav>
